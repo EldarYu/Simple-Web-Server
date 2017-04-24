@@ -1,4 +1,4 @@
-[Go to english](https://github.com/EldarYu/SimpleWebServer/blob/master/README_EN.md)
+[-> Go to english](https://github.com/EldarYu/SimpleWebServer/blob/master/README_EN.md)
 
 # 简介
 

@@ -17,6 +17,7 @@ namespace Simple_WebServer
         private Encoding CONTENT_ENCODE = Encoding.UTF8;  //String encoding  字符串编码
         private Socket SERVER_SOCKET;
         private string ROOT_PATH;   //Default root path of server  //服务器根目录
+        
         /// <summary>
         /// error page  
         /// 错误页面
@@ -84,7 +85,8 @@ namespace Simple_WebServer
             catch
             { return false; }
 
-            //
+            //Start listen
+            //开始侦听
             Thread requestListener = new Thread(() =>
             {
                 while (RUN_STATUS)
