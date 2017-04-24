@@ -1,6 +1,6 @@
 [<- 回到中文](https://github.com/EldarYu/SimpleWebServer)
 
-# ** This article is produced by Google Translate, forgive my poor english...  (-*v*-)  **
+# ** This article is produced by Google Translate, my poor english......   (-*v*-)  **
 
 # Description
 
