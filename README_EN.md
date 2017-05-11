@@ -4,7 +4,7 @@
 
 # Description
 
-The applet used to learn the HTTP protocol, using WinForm constructs, using socket implementation to handle static pages of the Web server, the code has detailed comments, welcome to Exchange Learning
+The applet used to learn the HTTP protocol, using WinForm constructs, using socket implementation to handle static pages of the Web server.
 
 # Environment
 
