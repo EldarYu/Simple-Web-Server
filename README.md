@@ -2,7 +2,7 @@
 
 # 简介
 
-用于学习 HTTP 协议的小程序,使用 winform 构建,使用 socket 实现处理静态页面的 web 服务器
+用于学习 HTTP 协议的小程序,使用 socket 实现处理静态页面的 web 服务器
 
 # 环境
 
