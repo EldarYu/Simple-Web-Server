@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Server.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="rootPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\ctOS\Desktop\New folder</Value>
+    </Setting>
+    <Setting Name="ipAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">808</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

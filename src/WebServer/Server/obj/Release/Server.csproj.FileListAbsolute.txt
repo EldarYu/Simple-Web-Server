@@ -1,0 +1,17 @@
+C:\Users\ctOS\Desktop\WebServer\Server\bin\Release\Server.exe.config
+C:\Users\ctOS\Desktop\WebServer\Server\bin\Release\Server.exe
+C:\Users\ctOS\Desktop\WebServer\Server\bin\Release\Server.pdb
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Views\FilePath.g.cs
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Views\MainWindow.g.cs
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\App.g.cs
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Server_MarkupCompile.cache
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Server_MarkupCompile.lref
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Views\FilePath.baml
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Views\MainWindow.baml
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Server.g.resources
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Server.Properties.Resources.resources
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Server.csproj.GenerateResource.Cache
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Server.exe
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Server.pdb
+C:\Users\ctOS\Desktop\WebServer\Server\obj\Release\Server.csprojResolveAssemblyReference.cache
