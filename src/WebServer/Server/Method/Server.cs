@@ -11,7 +11,7 @@ namespace Server.Method
     class Server
     {
         public bool RunStatus = false;  //Run status 服务器运行状态
-        private int TimeLimit = 8;  //Time limit for data transfers 数据传输时间限制
+        private int TimeLimit = 160;  //Time limit for data transfers 数据传输时间限制(以毫秒为单位)
         private Encoding ContentEncod = Encoding.UTF8;  //String encoding  字符串编码
         private Socket ServerSocket;
         private string RootPath;   //Default root path of server  //服务器根目录
