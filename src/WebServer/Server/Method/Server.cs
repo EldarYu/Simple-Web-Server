@@ -3,6 +3,7 @@ using System.IO;
 using System.Net.Sockets;
 using System.Text;
 using System.Net;
+using System.Threading.Tasks;
 using System.Threading;
 using System;
 
@@ -87,30 +88,30 @@ namespace Server.Method
 
             //Start listen
             //开始侦听
-            Thread requestListener = new Thread(() =>
-            {
-                while (RunStatus)
-                {
-                    try
-                    {
-                        Socket clientSocket;
-                        clientSocket = ServerSocket.Accept();
-                        Console.WriteLine("### LOG --- Listen for requests");
-                        Thread requestHandler = new Thread(() =>
-                        {
-                            clientSocket.ReceiveTimeout = TimeLimit;
-                            clientSocket.SendTimeout = TimeLimit;
-                            try { HandleRequest(clientSocket); }
-                            catch
+            Task requestListener = new Task(() =>
+              {
+                  while (RunStatus)
+                  {
+                      try
+                      {
+                          Socket clientSocket;
+                          clientSocket = ServerSocket.Accept();
+                          Console.WriteLine("### LOG --- Listen for requests");
+                          Task requestHandler = new Task(() =>
                             {
-                                clientSocket.Close();
-                            }
-                        });
-                        requestHandler.Start();
-                    }
-                    catch { }
-                }
-            });
+                                clientSocket.ReceiveTimeout = TimeLimit;
+                                clientSocket.SendTimeout = TimeLimit;
+                                try { HandleRequest(clientSocket); }
+                                catch
+                                {
+                                    clientSocket.Close();
+                                }
+                            });
+                          requestHandler.Start();
+                      }
+                      catch { }
+                  }
+              });
             requestListener.Start();
 
             return true;
@@ -143,7 +144,7 @@ namespace Server.Method
             int receiveByteCount = clientSocket.Receive(buffer);
             string strReceive = ContentEncod.GetString(buffer, 0, receiveByteCount);
 
-            Console.WriteLine("### HTTP-HEADER ###\r\n\r\n"+strReceive);
+            Console.WriteLine("### HTTP-HEADER ###\r\n\r\n" + strReceive);
 
             //Parse the method of the request
             //解析除请求方式
@@ -158,7 +159,7 @@ namespace Server.Method
             //Determine whether the request mode support,parse the file of the url
             //判断请求方式是否支持,解析出请求的文件
             string requestedFile = string.Empty;
-            if (httpMethod.Equals("GET") || httpMethod.Equals("POST"))
+            if (httpMethod.Equals("GET"))
                 requestedFile = requestedUrl.Split('?')[0];
             else
             {
@@ -225,6 +226,7 @@ namespace Server.Method
         /// </summary>
         private void SendResponse(Socket clientSocket, byte[] byteContent, string responseCode, string contentType)
         {
+            Console.WriteLine("### LOG --- Send request data");
             byte[] byteHeader = ContentEncod.GetBytes(
                 "HTTP/1.1 " + responseCode + "\r\n" +
                 "Server: Simple WebServer\r\n" +
@@ -235,6 +237,7 @@ namespace Server.Method
             clientSocket.Send(byteHeader);
             clientSocket.Send(byteContent);
             clientSocket.Close();
+            Console.WriteLine("### HTTP-HEADER ###\r\n\r\n" + ContentEncod.GetString(byteHeader) + ContentEncod.GetString(byteContent));
         }
     }
 }
